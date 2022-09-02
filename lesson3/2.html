@@ -16,7 +16,7 @@
       // a) Организовать такой массив для хранения товаров в корзине;
       // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
 
-      let basket = [
+      const basket = [
         {
           product: "яблоко",
           price: 30,
@@ -35,14 +35,21 @@
         },
       ];
 
-      let countBasketPrice = 0;
-      for (let prod of basket) {
-        countBasketPrice += prod.price;
-        console.log("Товар: " + prod.product, "Цена: " + prod.price);
+      let BasketPrice = 0;
+      function countBasketPrice() {
+        for (let prod of basket) {
+          BasketPrice += prod.price;
+        }
+        console.log("Общая цена " + BasketPrice);
       }
-      console.log("Общая цена " + countBasketPrice);
+      countBasketPrice();
 
-///////////////
+      // let countBasketPrice = 0;
+      // for (let prod of basket) {
+      //   countBasketPrice += prod.price;
+      //   console.log("Товар: " + prod.product, "Цена: " + prod.price);
+      // }
+      // console.log("Общая цена " + countBasketPrice);
     </script>
-  </body> 
+  </body>
 </html>
